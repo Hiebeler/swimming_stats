@@ -1,4 +1,5 @@
 import DashboardView from '@/views/DashboardView.vue'
+import SwimView from '@/views/SwimView.vue'
 import UploadView from '@/views/UploadView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -15,14 +16,11 @@ const router = createRouter({
       name: 'dashboard',
       component: DashboardView,
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue'),
-    // },
+    {
+      path: '/swims/:id',
+      name: 'swim-detail',
+      component: SwimView
+    }
   ],
 })
 

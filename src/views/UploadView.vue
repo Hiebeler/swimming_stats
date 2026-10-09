@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { parseSamsungHealth } from '@/parsers/samsungExercise'
 import router from '@/router'
-import { useSwimsStore } from '@/stores/counter'
+import { useSwimsStore } from '@/stores/swims'
 const store = useSwimsStore()
 
 async function onPick(event: Event) {

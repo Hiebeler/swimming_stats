@@ -15,8 +15,9 @@ export interface Swim {
 export interface Length {
   index: number
   startTime?: string
-  durationSec: number
-  strokes?: number
+  duration: number
+  stroke_count: number
   strokeType?: string
   distanceM?: number
+  swolf: number
 }

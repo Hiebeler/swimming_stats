@@ -58,7 +58,11 @@ export type SwimDetail = Partial<Swim>
 export function parseDetailJson(text: string): SwimDetail {
   const raw = JSON.parse(text)
 
-  const lengths: Length[] = raw.lengths
+  let lengths: Length[] = raw.lengths
+  lengths = lengths.map((length: Length) => {
+    const swolf = length.duration / 1000 + length.stroke_count
+    return { ...length, swolf }
+  })
 
   const detail: SwimDetail = {}
 

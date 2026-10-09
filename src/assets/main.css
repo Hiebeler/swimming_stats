@@ -1,1 +1,36 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-primary-50: #eff9ff;
+  --color-primary-100: #dff2ff;
+  --color-primary-200: #b8e6ff;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0d6a9d;
+  --color-primary-900: #0a599c;
+
+  --color-accent-400: #fb923c;
+  --color-accent-500: #f97316;
+
+  --color-surface:#11111c ;
+  --color-ink: #fff;
+
+  --color-card:#1a1a33 ;
+  --color-card-border: #e2e8f0;
+  --color-card-muted: #64748b;
+
+  --radius-card: 0.55rem;
+}
+
+@layer components {
+  .card {
+    @apply bg-card border border-card-border rounded-card p-4;
+  }
+  .card-title {
+    @apply text-lg font-semibold text-ink;
+  }
+  .card-label {
+    @apply text-sm text-card-muted;
+  }
+}
